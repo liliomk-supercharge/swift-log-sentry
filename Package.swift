@@ -1,11 +1,11 @@
-// swift-tools-version:5.5
+// swift-tools-version:6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "swift-log-sentry",
-    platforms: [.iOS(.v11), .macOS(.v10_13), .tvOS(.v11), .watchOS(.v4)],
+    platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)],
     products: [
         .library(
             name: "LoggingSentry",
@@ -14,7 +14,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-log.git", from: "1.6.3"),
-        .package(url: "https://github.com/getsentry/sentry-cocoa.git", from: "8.55.0"),
+        .package(url: "https://github.com/getsentry/sentry-cocoa.git", from: "9.0.0"),
     ],
     targets: [
         .target(
